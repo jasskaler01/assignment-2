@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Jaskaran Singh Video Club</a>.</p>
+</div>
+@{
+    var Most_Rated_movies= new[]{
+new{
+    title="Iron Man 3",
+    date="2015",
+    Rating="4.5/5",
+},
+new{
+    title="Avengers",
+    date="2013",
+    Rating="4.3/5",
+},
+new{
+    title="Joker",
+    date="2018",
+    Rating="4.2/5",
+},
+new{
+    title="Fast and Furious",
+    date="2018",
+    Rating="4.5/5",
+},
+new
+      {
+       title="Tommarow War",
+       date="2020",
+       Rating="4.5/5",
+}
+};
+}
+@for (int i = 0; i <Most_Rated_movies.Length; i++)
+{
+    var movies = Most_Rated_movies[i];
+    <text><strong>Movies Tittle :@movies.title</strong> <br/>
+          Release Date :@movies.date <br/>
+          Rating :@movies.Rating <br/> </text>
+}
